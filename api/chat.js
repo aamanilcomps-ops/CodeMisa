@@ -6,5 +6,5 @@ headers:{"Content-Type":"application/json","Authorization":Bearer ${process.env.
 body:JSON.stringify({model:"gpt-4o-mini",messages:[{role:"user",content:message}]})
 });
 const j=await r.json();
-res.json({reply:j.choices[0].message.content});
+res.json({reply: j.choices[0].message.content});
 }
