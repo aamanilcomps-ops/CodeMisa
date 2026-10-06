@@ -1,4 +1,5 @@
 export default async function handler(req,res){
+try{
 const {message}=req.body;
 const r=await fetch("https://api.openai.com/v1/chat/completions",{
 method:"POST",
@@ -6,5 +7,6 @@ headers:{"Content-Type":"application/json","Authorization":Bearer ${process.env.
 body:JSON.stringify({model:"gpt-4o-mini",messages:[{role:"user",content:message}]})
 });
 const j=await r.json();
-res.json({reply: j.choices[0].message.content});
+res.json({reply: j.choices?.[0]?.message?.content || JSON.stringify(j)});
+}catch(e){ res.status(500).json({reply:"Error: "+e.message}) }
 }
