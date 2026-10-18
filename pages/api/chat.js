@@ -13,9 +13,8 @@ messages: [{ role: "user", content: message }]
 })
 });
 const j = await r.json();
-if (j.error) return res.status(500).json({ reply: "OpenAI Error: " + j.error.message });
-res.json({ reply: j.choices?.[0]?.message?.content || "No reply" });
+res.status(200).json(j);
 } catch (e) {
-res.status(500).json({ reply: "Server Error: " + e.message });
+res.status(500).json({ error: String(e) });
 }
 }
