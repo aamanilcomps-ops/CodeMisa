@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html>
-<link rel="manifest" href="/manifest.json">
-<script>if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js")</script>
-<head>
-<meta name=viewport content=width=device-width,initial-scale=1>
-<title>CodeMisa — Future OS</title>
-<style>
-body{margin:0;background:#050a14;color:#fff;font-family:system-ui;overflow:hidden}
-.bg{position:fixed;inset:0;background:radial-gradient(circle at 50% 0%, #00f0ff33, transparent 60%), linear-gradient(180deg,#060d1f,#000)}
-.nav{position:relative;display:flex;justify-content:space-between;padding:20px 40px}
-.logo{font-weight:900;letter-spacing:3px;color:#00f0ff}
-.hero{position:relative;text-align:center;margin-top:80px}
-h1{font-size:56px;background:linear-gradient(90deg,#00f0ff,#7a5cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.card{margin:40px auto;max-width:800px;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);border:1px solid rgba(0,240,255,0.2);border-radius:24px;padding:40px}
-.btn{background:#00f0ff;color:#000;padding:14px 28px;border-radius:999px;font-weight:700;border:none;cursor:pointer}
-</style>
-</head>
-<body>
-<div class=bg></div>
-<div class=nav><div class=logo>CODEMISA OS</div><div>v1.0 FUTURE</div></div>
-<div class=hero>
-<h1>THE FUTURE IS NOW</h1>
-<p>Most Advanced AI Operating System</p>
-<div class=card>
-<p>⚡ Super Intelligent • 🔒 Unbreakable Security • 🌐 Internet Realm Access</p>
-<a href="/chat.html"><button class=btn>INITIALIZE MISA</button></a>
-</div>
-</div>
-</body>
-</html>
+export default function Home() {
+  return (
+    <div style={{minHeight:"100vh",display:"grid",placeItems:"center",background:"radial-gradient(1200px 600px at 50% -10%, #7c3aed 0%, #0b0b12 60%)",color:"white",fontFamily:"system-ui",padding:"40px",textAlign:"center"}}>
+      <div>
+        <h1 style={{fontSize:"56px",margin:"0",letterSpacing:"-2px"}}>Code<span style={{color:"#a78bfa"}}>Misa</span></h1>
+        <p style={{opacity:0.8,fontSize:"18px",margin:"12px 0 28px"}}>The most powerful AI — create, code & deploy in seconds.</p>
+        <div style={{display:"flex",gap:"12px",justifyContent:"center"}}>
+          <a href="/login.html" style={{padding:"12px 22px",background:"white",color:"black",borderRadius:"999px",textDecoration:"none",fontWeight:700}}>Get Started</a>
+          <a href="/editor.html" style={{padding:"12px 22px",border:"1px solid rgba(255,255,255,0.3)",color:"white",borderRadius:"999px",textDecoration:"none"}}>Open Editor</a>
+        </div>
+      </div>
+    </div>
+  )
+}
