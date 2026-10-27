@@ -1,9 +1,14 @@
 {
-  "dependencies": {
-    "formidable": "^3.5.4",
-    "next": "^16.4.2",
-    "next-auth": "^4.24.15",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
-  }
+"scripts": {
+"dev": "next dev",
+"build": "next build --webpack",
+"start": "next start"
+},
+"dependencies": {
+"formidable": "^3.5.4",
+"next": "^16.4.2",
+"next-auth": "^4.24.15",
+"react": "^19.3.1",
+"react-dom": "^19.3.1"
+}
 }
